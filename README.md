@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/uflist/couchSync-releases/releases/latest"><img alt="Latest version" src="https://img.shields.io/github/v/release/uflist/couchSync-releases?style=for-the-badge&label=version&color=e9a85f&labelColor=2a221c"></a>
+  <a href="https://github.com/uflist/couchSync-releases/releases/latest"><img alt="Latest version" src="https://img.shields.io/github/v/release/uflist/couchSync-releases?include_prereleases&sort=semver&style=for-the-badge&label=version&color=e9a85f&labelColor=2a221c&cacheSeconds=3600"></a>
   <a href="https://github.com/uflist/couchSync-releases/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/uflist/couchSync-releases/total?style=for-the-badge&label=downloads&color=d7774f&labelColor=2a221c"></a>
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-f2e6d8?style=for-the-badge&logo=windows&logoColor=f2e6d8&labelColor=2a221c">
 </p>
@@ -94,4 +94,4 @@ A common false positive for unsigned apps. Restore it and add the couchSync fold
 
 ---
 
-<p align="center"><sub>Made for movie nights with friends 🛋️🍿</sub></p>
+<p align="center"><sub>made with love for GDC™ · made by <b>flist</b> 🛋️🍿</sub></p>
