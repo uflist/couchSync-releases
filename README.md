@@ -1,177 +1,97 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uflist/couchSync-releases/main/couchsync-banner.svg" alt="couchSync — watch party sincronizada para o Stremio" width="100%">
+  <img src="https://raw.githubusercontent.com/uflist/couchSync-releases/main/couchsync-banner.svg" alt="couchSync — synced watch parties for Stremio" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/uflist/couchSync-releases/releases/latest"><img alt="Última versão" src="https://img.shields.io/github/v/release/uflist/couchSync-releases?style=for-the-badge&label=vers%C3%A3o&color=e9a85f&labelColor=2a221c"></a>
+  <a href="https://github.com/uflist/couchSync-releases/releases/latest"><img alt="Latest version" src="https://img.shields.io/github/v/release/uflist/couchSync-releases?style=for-the-badge&label=version&color=e9a85f&labelColor=2a221c"></a>
   <a href="https://github.com/uflist/couchSync-releases/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/uflist/couchSync-releases/total?style=for-the-badge&label=downloads&color=d7774f&labelColor=2a221c"></a>
   <img alt="Windows" src="https://img.shields.io/badge/Windows-10%20%7C%2011-f2e6d8?style=for-the-badge&logo=windows&logoColor=f2e6d8&labelColor=2a221c">
 </p>
 
 <p align="center">
-  <b>Vejam filmes e séries juntos, em sincronia, cada um na qualidade original.</b><br>
-  O Discord fica só para falar — nada de screenshare pixelizada. 🍿
-</p>
-
-<p align="center">
-  <a href="https://github.com/uflist/couchSync-releases/releases/latest">
-    <img alt="Descarregar o couchSync" src="https://img.shields.io/badge/%E2%AC%87%20Descarregar%20o%20couchSync-.exe-e9a85f?style=for-the-badge&labelColor=d7774f">
-  </a>
+  <b>Watch movies and shows with your friends, in sync, everyone in original quality.</b><br>
+  Discord is just for talking — no more blurry screenshare. 🍿
 </p>
 
 ---
 
-## 🛋️ O que é
+## 🛋️ How it works
 
-O couchSync junta os amigos num sofá virtual. Uma pessoa é o **host** 👑: escolhe o filme e controla o play, a pausa e os saltos. Toda a gente vê **o mesmo momento ao mesmo tempo** — mas cada um reproduz o vídeo no seu próprio PC, através do seu Stremio, por isso a imagem é a original e não a da screenshare.
+One person is the **host** 👑: they pick what to watch and control play, pause and seeking. Everyone else plays the **same video on their own PC** through their own Stremio, and couchSync keeps everyone on the same second. If someone is still loading, the room waits for them.
 
-Se alguém estiver a carregar, a sala espera por essa pessoa. Se alguém se atrasar meio segundo, o couchSync acerta-o sem ninguém dar por isso.
+**Everyone needs:** [Stremio](https://www.stremio.com/) desktop **open** · [Radmin VPN](https://www.radmin-vpn.com/) connected to the group's network.
 
----
+## 👥 Joining a room
 
-## 👥 Vou só entrar na sala de alguém
+Nothing to download. Open the link the host sent you (`http://26.x.x.x:8000`) in Chrome, Edge or Firefox, click the button on the entry page, pick a name and you're in.
 
-**Não precisas de descarregar nada daqui.** Só precisas de:
+## 👑 Hosting a room
 
-- [x] **Stremio** desktop instalado e **aberto**
-- [x] **Radmin VPN** ligado, na rede do grupo
-- [x] O **link** que o host te mandou (`http://26.x.x.x:8000`)
-
-Abre o link no Chrome, Edge ou Firefox, carrega no botão da porta de entrada, escolhe um nome (e uma foto, se quiseres) e entra na sala. Já está. ✨
-
----
-
-## 👑 Quero ser o host
-
-### Antes de começar
-1. **Stremio** desktop instalado e **aberto** — é ele que vai buscar os filmes.
-2. **Radmin VPN** ligado, na rede do grupo.
-
-### Arrancar
-1. Descarrega o **`couchSync-vX.Y.Z.exe`** em [*Releases*](https://github.com/uflist/couchSync-releases/releases/latest) e põe-no numa pasta só para ele (ex.: `Documentos\couchSync`).
-2. Duplo clique no `.exe`.
-3. Na primeira vez, a **firewall** do Windows pergunta se o deixas comunicar: carrega em **«Permitir»** (redes privadas). Sem isso os amigos não conseguem entrar.
-4. Abre-se a **janelinha do couchSync** e o browser em `http://localhost:8000`.
-5. Na janelinha está o link para os amigos (`http://26.x.x.x:8000`) — carrega em **«Copiar»** e manda-o no Discord.
-6. Para desligar, fecha a janelinha.
+1. Download **`couchSync-vX.Y.Z.exe`** from the [latest release](https://github.com/uflist/couchSync-releases/releases/latest) and put it in its own folder.
+2. Double-click it. The couchSync window opens, along with your browser at `http://localhost:8000`.
+3. Copy the friends' link from the window and send it on Discord.
+4. To shut down, close the window.
 
 > [!IMPORTANT]
-> **«O Windows protegeu o seu PC»?** Carrega em **«Mais informações»** → **«Executar mesmo assim»**. Aparece porque o programa não tem uma assinatura digital paga, não porque tenha vírus. Se o antivírus o apagar, põe a pasta do couchSync nas exclusões dele.
+> **First run only:** if Windows says *"Windows protected your PC"*, click **More info → Run anyway** (the app just isn't code-signed). When the firewall asks, click **Allow** for private networks, otherwise your friends can't connect.
 
-> [!NOTE]
-> O primeiro arranque demora uns segundos (o programa prepara-se); os seguintes são rápidos.
+**Real-Debrid (optional):** click **Real-Debrid** in the window, paste your [API token](https://real-debrid.com/apitoken) and save. Without it, you watch via torrent like everyone else. The key stays in `couchSync.env` next to the `.exe` and is **never shared** with your friends.
 
-### ⚡ Real-Debrid (opcional)
-
-Tens Real-Debrid? Na janelinha carrega em **«Real-Debrid»**, cola a tua chave ([real-debrid.com/apitoken](https://real-debrid.com/apitoken)) e **«Guardar»**. A janela diz logo se a chave serve — não é preciso reiniciar.
-Sem chave, vês por torrent como os outros.
-
-> [!TIP]
-> 🔒 A chave fica guardada no `couchSync.env`, ao lado do `.exe`, **só no teu PC**. A app nunca a envia aos outros: os amigos veem o mesmo torrent pelo Stremio deles.
-
-### 🔄 Atualizar
-
-A versão aparece no fundo do ecrã de entrada. Quando houver uma nova, aparece lá um aviso com link: descarrega o `.exe` novo para a **mesma pasta** e apaga o antigo. O teu `couchSync.env` fica onde está (não tens de pôr a chave outra vez).
-
-Quem só entra nas salas **nunca** precisa de atualizar — a página vem sempre do PC do host.
+**Updating:** when a new version is out, the entry screen tells you. Download the new `.exe` into the same folder and delete the old one — your settings stay. Only the host ever needs to update.
 
 ---
 
-## ✨ O que dá para fazer
+## ✨ Features
 
-| | |
+- 🎮 **Real sync** — the host's play, pause and seek reach everyone; automatic pause while anyone is buffering
+- 🍿 **Browse & search** — Cinemeta catalogs, episodes, torrent list with quality and seeders
+- 🗳️ **Suggestions with votes** — anyone can suggest, everyone votes, the host decides
+- 💬 **Your own subtitles** — OpenSubtitles or embedded, with your own language, size, style and delay
+- 📺 **Binge mode** — "Up next" and auto-advance between episodes
+- 🐢 **Dead or slow torrent?** The host swaps it in one click
+- 🔁 **Refresh-proof** — hit F5 and you're back at the same second
+- 🛋️ **The couch** — see who's in the room, with avatars and loading progress; click someone to hand them the crown 👑
+
+| Key | Action |
 |:---:|---|
-| 🎮 | **Sincronização a sério** — play, pausa e saltos do host para todos; pausa automática quando alguém está a carregar |
-| 🍿 | **Catálogos e pesquisa** — populares, novidades, séries por episódio, lista de torrents com qualidade e seeders |
-| 🗳️ | **Sugestões com votos** — quem não é host sugere, todos votam, o host aceita |
-| 💬 | **Legendas à tua medida** — OpenSubtitles e embutidas; cada um escolhe língua, tamanho, estilo e atraso |
-| 🔊 | **Faixa de áudio** à escolha |
-| 📺 | **Séries sem pausas** — «A seguir» no fim do episódio e avanço automático |
-| 🐢 | **Torrent morto ou lento?** O host troca por outro num clique |
-| 🔁 | **Fizeste F5?** Voltas ao mesmo filme, no mesmo segundo |
-| 🛋️ | **O sofá** — vês quem está na sala, com foto e progresso de carregamento |
-| 👑 | **Passa a coroa** a outra pessoa com um clique no sofá |
-
-### ⌨️ Atalhos
-
-| Tecla | Ação |
-|:---:|---|
-| <kbd>F</kbd> | Ecrã inteiro |
-| <kbd>C</kbd> | Legendas e áudio |
-| <kbd>M</kbd> | Mudo |
+| <kbd>F</kbd> · <kbd>C</kbd> · <kbd>M</kbd> | Fullscreen · subtitles & audio · mute |
 | <kbd>↑</kbd> <kbd>↓</kbd> | Volume |
-| <kbd>Espaço</kbd> | Play / pausa *(só host)* |
-| <kbd>←</kbd> <kbd>→</kbd> | Recuar / avançar 10 s *(só host)* |
+| <kbd>Space</kbd> · <kbd>←</kbd> <kbd>→</kbd> | Play/pause · ±10 s *(host only)* |
 
 ---
 
-## 🩺 Problemas comuns
+## 🩺 Troubleshooting
 
 <details>
-<summary><b>Os meus amigos não conseguem abrir o link</b></summary>
+<summary><b>Friends can't open the link</b></summary>
 
-- Confirma que **todos** estão ligados ao Radmin VPN, na mesma rede.
-- Na primeira vez, a firewall tinha de ser **permitida** em redes privadas. Se carregaste em «Cancelar», vai a *Segurança do Windows → Firewall → Permitir uma aplicação* e ativa o couchSync.
-- Usa o link da janelinha (botão «Copiar»), não `localhost` — esse só funciona no teu PC.
+Make sure everyone is on the same Radmin VPN network, that you allowed couchSync through the firewall (*Windows Security → Firewall → Allow an app*), and that you sent the link from the window — not `localhost`.
 </details>
 
 <details>
-<summary><b>Aparece um aviso a dizer que o Stremio não está aberto</b></summary>
+<summary><b>"Stremio is not open" warning</b></summary>
 
-Abre o Stremio desktop (não basta a versão web) e deixa-o aberto enquanto vês. Acontece tanto ao host como aos amigos: cada um precisa do seu.
+Open the Stremio **desktop** app (the web version isn't enough) and keep it running. Everyone needs their own.
 </details>
 
 <details>
-<summary><b>O vídeo fica sempre a carregar</b></summary>
+<summary><b>The video never finishes loading</b></summary>
 
-O torrent pode estar morto ou lento — o cartão de carregamento avisa. O host pode carregar em **trocar** para escolher outro torrent do mesmo título (ou um **mais leve**).
+The torrent is probably dead or slow — the loading card will say so. The host can swap it for another one (or a lighter one).
 </details>
 
 <details>
-<summary><b>Como host, abri pelo link 26.x.x.x e aparece tudo estranho</b></summary>
+<summary><b>As the host, things look wrong when I open the 26.x.x.x link</b></summary>
 
-No teu PC usa sempre `http://localhost:8000`. Pelo IP do Radmin, o browser é tratado como se fosses um amigo — a app deteta isso e sugere o endereço certo.
+On your own PC always use `http://localhost:8000`; through the Radmin IP you're treated as a guest.
 </details>
 
 <details>
-<summary><b>Depois de F5 o vídeo não arranca</b></summary>
+<summary><b>My antivirus deleted the .exe</b></summary>
 
-Os browsers às vezes bloqueiam o som automático depois de recarregar a página. Carrega em **«Continuar a ver»**.
-</details>
-
-<details>
-<summary><b>O antivírus apagou o .exe</b></summary>
-
-É um falso positivo comum em programas sem assinatura paga. Restaura o ficheiro e põe a pasta do couchSync nas exclusões do antivírus.
+A common false positive for unsigned apps. Restore it and add the couchSync folder to your antivirus exclusions.
 </details>
 
 ---
 
-## 📜 Histórico
-
-<details open>
-<summary><b>0.2.0</b></summary>
-
-- Agora é **um único `.exe`**: para atualizar basta trocá-lo.
-- **Janelinha do couchSync** em vez da consola: versão, estado, se o Stremio está aberto, link dos amigos com «Copiar» e «Abrir no browser».
-- Chave do **Real-Debrid** posta na janelinha, verificada na hora, sem reiniciar.
-- O `.exe` apaga sozinho os ficheiros das versões antigas.
-- Logo no separador do browser.
-- No lobby, o logo passeia pelo fundo como o velho «DVD» 📀, com efeito VHS e festa quando acerta num canto.
-</details>
-
-<details>
-<summary><b>0.1.0 — primeira versão de testes</b></summary>
-
-- Salas sincronizadas, pausa para todos em buffering, entrar a meio.
-- Catálogos e pesquisa, torrents, Real-Debrid opcional no host.
-- Conversão automática só para quem precisa.
-- Legendas do OpenSubtitles e embutidas.
-- Faixa de áudio, próximo episódio, troca de torrents, sofá, fotos, sugestões com votos.
-</details>
-
----
-
-<p align="center">
-  <sub>Feito para as noites de cinema com os amigos 🛋️🍿</sub>
-</p>
+<p align="center"><sub>Made for movie nights with friends 🛋️🍿</sub></p>
