@@ -23,7 +23,7 @@ One person is the **host** 👑: they pick what to watch and control play, pause
 
 ## 👥 Joining a room
 
-Nothing to download. Open the link the host sent you (`http://26.x.x.x:8000`) in Chrome, Edge or Firefox, click the button on the entry page, pick a name and you're in.
+Nothing to download. Open the link the host sent you (`http://26.x.x.x:8000`) in Chrome or Edge and click **Join**. The first time, the browser warns that the connection isn't private (the room uses a homemade certificate): click **Advanced → Continue**. If it asks to access apps on this device or the local network, click **Allow** (that's your Stremio). Pick a name and you're in.
 
 ## 👑 Hosting a room
 
@@ -66,6 +66,18 @@ Nothing to download. Open the link the host sent you (`http://26.x.x.x:8000`) in
 <summary><b>Friends can't open the link</b></summary>
 
 Make sure everyone is on the same Radmin VPN network, that you allowed couchSync through the firewall (*Windows Security → Firewall → Allow an app*), and that you sent the link from the window — not `localhost`.
+</details>
+
+<details>
+<summary><b>Clicking Join downloads a <code>.htm</code> file</b></summary>
+
+The host is on version 0.2.1 or older, which joined through Stremio's proxy — Stremio's latest update turned that off. The **host** needs to update to 0.3.0 or newer; guests don't need to do anything.
+</details>
+
+<details>
+<summary><b>"Your connection isn't private" when joining</b></summary>
+
+Expected: the room uses a homemade certificate (it only travels inside your Radmin network). Click **Advanced → Continue** (or **Proceed**). You only need to do it once per host.
 </details>
 
 <details>
